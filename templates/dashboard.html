@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<style>
+    /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #575757;
+}
+
+/* Main Content */
+.content {
+  margin-left: 270px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quick-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+}
+
+</style>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Business Dashboard</h2>
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#sales">Sales</a></li>
+          <li><a href="#marketing">Marketing</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#tasks">Tasks</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Welcome Section -->
+      <section id="overview" class="section">
+        <h1>Welcome, Alex!</h1>
+        <div class="quick-stats">
+          <div class="card">
+            <h3>Total Revenue</h3>
+            <p>$12,500</p>
+          </div>
+          <div class="card">
+            <h3>Total Users</h3>
+            <p>1,200</p>
+          </div>
+          <div class="card">
+            <h3>Active Campaigns</h3>
+            <p>5</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Section -->
+      <section id="sales" class="section">
+        <h2>Sales Metrics</h2>
+        <div class="chart">
+          <h3>Sales Trends</h3>
+          <p>[Graph Placeholder]</p>
+        </div>
+        <div class="details">
+          <div class="card">
+            <h3>Top-Selling Products</h3>
+            <p>Product A, Product B, Product C</p>
+          </div>
+          <div class="card">
+            <h3>Revenue Breakdown</h3>
+            <p>Category A: $5,000, Category B: $7,500</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marketing Section -->
+      <section id="marketing" class="section">
+        <h2>Marketing Performance</h2>
+        <div class="card">
+          <h3>Active Campaigns</h3>
+          <p>Emails Sent: 2,500 | Open Rate: 45%</p>
+        </div>
+      </section>
+
+      <!-- Inventory Section -->
+      <section id="inventory" class="section">
+        <h2>Inventory Overview</h2>
+        <div class="card">
+          <h3>Low Stock Items</h3>
+          <p>Product X, Product Y</p>
+        </div>
+      </section>
+
+      <!-- Tasks Section -->
+      <section id="tasks" class="section">
+        <h2>Task Management</h2>
+        <div class="card">
+          <h3>Pending Tasks</h3>
+          <p>Create a new campaign, Restock inventory</p>
+        </div>
+      </section>
+
+      <!-- Chatbot -->
+      <section id="chatbot" class="section">
+        <h2>Chatbot Insights</h2>
+        <div class="card">
+          <h3>Ask Questions</h3>
+          <p>What’s my revenue forecast for next week?</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
