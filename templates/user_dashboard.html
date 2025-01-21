@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 20%;
+      background-color: #222;
+      color: white;
+      height: 100vh;
+      padding: 1rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin: 1rem 0;
+    }
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .main {
+      width: 80%;
+      padding: 2rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 5px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .metrics {
+      display: flex;
+      justify-content: space-between;
+    }
+    .metrics .metric {
+      flex: 1;
+      margin: 0 0.5rem;
+      background-color: #eaf7ea;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .notifications, .recent-activity {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dashboard,{{ user_data.username }}</h1>
+  </header>
+
+  <nav>
+    <h2>My Business Tools</h2>
+    <ul>
+      <li><a href="{{ url_for('home')}}">Home</a></li>
+      <li><a href="#">Tools</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Manage Tools</a></li>
+        <li><a href="#">Customize Settings</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Billing</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <!-- Metrics Section -->
+      <section class="card metrics">
+        <div class="metric">
+          <h3>Active Tools</h3>
+          <p>5</p>
+        </div>
+        <div class="metric">
+          <h3>Reports Generated</h3>
+          <p>12</p>
+        </div>
+        <div class="metric">
+          <h3>Notifications</h3>
+          <p>3 New</p>
+        </div>
+      </section>
+
+      <!-- Analytics and Reports -->
+      <section class="card">
+        <h3>Analytics</h3>
+        <p>View trends and performance metrics:</p>
+        <ul>
+          <li>Revenue Analysis</li>
+          <li>User Engagement</li>
+          <li>Task Completion</li>
+        </ul>
+        <button>View Full Analytics</button>
+      </section>
+
+      <!-- Notifications -->
+      <section class="card">
+        <h3>Notifications</h3>
+        <div class="notifications">
+          <p>Task 1 completed successfully.</p>
+          <p>Report "Sales Summary" generated.</p>
+          <p>New tool added to your account.</p>
+        </div>
+      </section>
+
+      <!-- Recent Activity -->
+      <section class="card">
+        <h3>Recent Activity</h3>
+        <div class="recent-activity">
+          <p>Generated "Quarterly Report."</p>
+          <p>Logged in from a new device.</p>
+          <p>Customized notification settings.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 My Business Tools - All rights reserved.</p>
+  </footer>
+</body>
+</html>

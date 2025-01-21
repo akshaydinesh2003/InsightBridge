@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .tools-container {
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .tool {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tool:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .tool h2 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .tool p {
+      font-size: 1rem;
+      color: #666;
+      margin: 0.5rem 0 1rem 0;
+    }
+    .tool a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #4CAF50;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .tool a:hover {
+      background-color: #45a049;
+    }
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tools</h1>
+    <p>Discover tools to streamline and manage your business processes.</p>
+  </header>
+
+  <section class="tools-container">
+    <div class="tool">
+      <h2>Task Manager</h2>
+      <p>Plan, track, and manage tasks effectively.</p>
+      <a href="{{ url_for('task_manager') }}">Open Tool</a>
+    </div>
+    <div class="tool">
+      <h2>Invoice Generator</h2>
+      <p>Create professional invoices in seconds.</p>
+      <a href="{{ url_for('invoice_generator') }}">Open Tool</a>
+    </div>
+    <div class="tool">
+      <h2>Customer Tracker</h2>
+      <p>Keep track of customer details and interactions.</p>
+      <a href="{{ url_for('customer_tracker') }}">Open Tool</a>
+    </div>
+    <div class="tool">
+      <h2>Performance Monitor</h2>
+      <p>Analyze and improve business performance.</p>
+      <a href="{{ url_for('performance_monitor') }}">Open Tool</a>
+    </div>
+    <div class="tool">
+      <h2>Team Collaboration</h2>
+      <p>Enable seamless communication and teamwork.</p>
+      <a href="{{ url_for('team_collaboration') }}">Open Tool</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 My Business Tools. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
